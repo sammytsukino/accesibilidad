@@ -72,5 +72,28 @@
   });
 </script>
 
-aria-hidden 
-aria-live
+<h2>aria-hidden</h2> 
+<button>
+  Guardar <span aria-hidden="true">💾</span>
+</button>
+
+<h2>aria-hidden</h2>
+<p aria-hidden="true">Texto solo decorativo</p>
+
+<h2>aria-live</h2>
+<h3>Mensaje dinámico anunciado automáticamente</h3>
+<div aria-live="polite" id="mensaje">
+  <!-- el mensaje iría aquí -->
+</div>
+
+<button onclick="mostrarMensaje()">Enviar</button>
+
+<script>
+  function mostrarMensaje() {
+    document.getElementById("mensaje").textContent = "Formulario enviado correctamente.";
+  }
+</script>
+
+<div aria-live="assertive">
+  Error: el campo contraseña es obligatorio
+</div>
