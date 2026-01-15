@@ -1,0 +1,76 @@
+<button aria-label="Cerrar ventana">Cerrar</button>
+
+
+<a href="" aria-label="Ver mi perfil">
+    <img src="" alt="">
+</a>
+
+<input type="search" aria-label="buscar productos">
+
+
+<button aria-label="Eliminar producto zapatos Nike"></button>
+
+
+<h2 id="titulo-dialogo">Confirmar eliminación</h2>
+<div role="region" aria-labelledby="titulo-dialogo"></div>
+
+
+<label for="email">Correo electrónico</label>
+<input type="email" id="email" aria-describedby="emailHelp">
+<div id="emailHelp">Introduce tu correo electrónico completo.</div>
+
+<button aria-describedby="saveDesc">Guardar</button>
+<span id="saveDesc">Se guardarán todos los cambios realizados.</span>
+
+
+<button aria-details="details1">Ver detalles</button>
+
+<div id="details1">
+  <p>Resultados del examen:</p>
+  <ul>
+    <li>Matemáticas: 95%</li>
+    <li>Ciencias: 88%</li>
+    <li>Lengua: 92%</li>
+  </ul>
+</div>
+
+
+<img src="grafico.jpg" alt="Gráfica de ventas en 2022" aria-details="graphDetails">
+
+<div id="graphDetails">
+    <p>Este gráfico muestra las ventas mensuales desde enero a diciembre</p>
+</div>
+
+
+<button aria-describedby="desc">Guardar</button>
+<div id="desc" class="visually-hidden">
+  Se guardarán todos los cambios realizados.
+</div>
+
+
+
+<button aria-pressed="false" id="likeBtn">Me gusta</button>
+
+<script>
+  const btn = document.getElementById('likeBtn');
+  btn.addEventListener('click', () => {
+    const pressed = btn.getAttribute('aria-pressed') === 'true';
+    btn.setAttribute('aria-pressed', !pressed);
+  });
+</script>
+
+<button role="tab" aria-selected="true">Pestaña 1</button>
+<button role="tab" aria-selected="false">Pestaña 2</button>
+
+<input type="checkbox" aria-checked="false" id="subscribe">
+<label for="subscribe">Suscribirse</label>
+
+<script>
+  const cb = document.getElementById('subscribe');
+  cb.addEventListener('change', () => {
+    cb.setAttribute('aria-checked', cb.checked);
+  });
+</script>
+
+aria-hidden 
+aria-live
